@@ -40,7 +40,7 @@ console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -62,7 +62,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(number){
     return (number === 2);
 }
-console.log(isTwo(2));
+console.log(isTwo(random));
 
     /**
  * TODO:
@@ -87,8 +87,8 @@ function calculateTip(percentage, billTotal) {
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
-/**
+    console.log(calculateTip(prompt("What is the percentage you would like to tip?"), prompt("What is your bill total?")));
+    /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
  * (before a discount is applied), and a discount percentage (a number between 0
@@ -102,4 +102,11 @@ function calculateTip(percentage, billTotal) {
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+    function applyDiscount(originalPrice, discountPercent){
+        return "$" + originalPrice * discountPercent;
+    }
+
+    console.log(applyDiscount(75, .25));
+
 } ())
