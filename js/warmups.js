@@ -5,7 +5,7 @@ console.log("Yay! I completed the warm-up!")
 
 
 function fizzBuzz(limit) {
-    if (limit === undefined) {          // this is David's "extra" way of doing it. leaving this out is also correct.
+    if (limit === undefined) {          // this is David's "extra" way of doing it. leaving this out (replacing limit in the statement with 100) is also correct.
         limit = 100;
     }
     for (let x = 1; x <= limit; x++) {
