@@ -52,7 +52,7 @@ numberPyramid();
     }
     countingDownMultiples(100);
 
-// Break and Continue exercises
+
 
 
 })();
