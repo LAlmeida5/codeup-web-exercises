@@ -53,9 +53,9 @@
         if(shopper.amount > 200){
             let discount = shopper.amount * .12;
             let dTotal = shopper.amount - discount ;
-            console.log(shopper.name + " your total is $" + shopper.amount + "your discount is $" + discount + "Your new total is $" + dTotal);
+            console.log(shopper.name + " , Your total is $" + shopper.amount + " Your discount is $" + discount + " Your new total is $" + dTotal);
         } else {
-            return shopper.name + ", you dont have any discounts pending, your total is $ " + shopper.amount;
+            console.log(shopper.name + ", you dont have any discounts pending, your total is $ " + shopper.amount);
         }
     });
 
@@ -85,6 +85,14 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    let books = [
+        {title: "Harry Potter and the Sorcerer's Stone", author:{firstName: "J.K.", lastName: "Rowling"}},
+        {title: "Verity", author:{firstName: "Colleen", lastName: "Hoover"}},
+        {title: "Finding Me: A Memoir", author:{firstName: "Viola", lastName: "Davis"}},
+        {title: "Where the Crawdads Sing", author:{firstName: "Delia", lastName: "Owens"}},
+        {title: "The Very Hungry Caterpillar", author:{firstName: "Eric", lastName: "Carle"}}
+    ];
+    console.log(books);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -109,6 +117,9 @@
      *      ---
      *      ...
      */
+    books.forEach(function(book, index) {
+        console.log("Book # "+ (index + 1) +  "\n" +"Title: " + book.title + "\n" + "Author: "  + book.author.firstName + " " + book.author.lastName)
+    });
 
     /**
      * Bonus:
@@ -120,5 +131,7 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
 
 })();
