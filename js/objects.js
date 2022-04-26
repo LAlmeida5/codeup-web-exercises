@@ -24,7 +24,7 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    person.sayHello = function sayHello() {
+    person.sayHello = function() {
         return "Hello from " + this.firstName + " " + this.lastName + "!";
     }
 
@@ -53,7 +53,7 @@
         if(shopper.amount > 200){
             let discount = shopper.amount * .12;
             let dTotal = shopper.amount - discount ;
-            console.log(shopper.name + " , Your total is $" + shopper.amount + " Your discount is $" + discount + " Your new total is $" + dTotal);
+            console.log(shopper.name + " , Your total is $" + shopper.amount.toFixed(2) + " Your discount is $" + discount.toFixed(2) + " Your new total is $" + dTotal.toFixed(2));
         } else {
             console.log(shopper.name + ", you dont have any discounts pending, your total is $ " + shopper.amount);
         }
@@ -131,7 +131,46 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(title, author) {
+        let authorArr = author.split(" ");
+        if (authorArr.length < 2) {
+            return {
+                title,
+                author: {
+                    firstName: "",
+                    lastName: authorArr[0]
+                }
+            }
+        } else {
+            return {
+                title,
+                author: {
+                    firstName: authorArr[0],
+                    lastName: authorArr[1]
+                }
+            }
+        }
+    }
 
+    let title = prompt("Hey tell me you favorite book's title!");
+    let author= prompt("And who wrote that?");
+
+    let booksFromPrompt = createBook(title, author);
+    console.log(booksFromPrompt);
+
+    const library = [createBook("Garfield Loses His Feet", "jim Davis"), createBook("Les Miserables", "Victor Hugo")];
+
+    function showBookInfo(book) {
+        return "Title: " + book.title + "\nAuthor: " + book.author.firstName + " " + book.author.lastName;
+    }
+
+    function showAllBooksInfo(books) {
+        let count = 1;
+        let str = "";
+        for(let book of books) {
+            str += "Book #" + count++ + "\n" + showBookInfo(book) + "\n ";
+        }
+    }
 
 
 })();
