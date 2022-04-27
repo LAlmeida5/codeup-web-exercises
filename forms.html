@@ -6,5 +6,53 @@
 </head>
 <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your email: ">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password:">
+        </div>
+
+        <br>
+
+        <h3>Bio:</h3>
+        <label for="bio"></label><br>
+        <textarea name="bio" id="bio" rows="10" cols="25" placeholder="Tell us a little bit about yourself..."></textarea>
+
+        <br><br>
+
+        <h3>How did you hear about us?</h3>
+
+        <input type="radio" name="question1" id="Billboard" value="Billboard">Billboard<br>
+        <label for="Billboard"></label>
+
+        <input type="radio" name="question1" id="Radio Ad" value="Radio Ad">Radio Ad<br>
+        <label for="Radio Ad"></label>
+
+        <input type="radio" name="question1" id="Internet Ad" value="Internet Ad">Internet Ad<br>
+        <label for="Internet Ad"></label>
+
+        <input type="radio" name="question1" id="Other" value="Other">Other<br>
+        <label for="Other"></label>
+
+        <br>
+
+        <label for="question2">What browser are you currently using?</label><br>
+        <form action="https://request-inspector.glitch.me/">
+            <input list="browsers">
+            <datalist id="question2">
+                <option value="Safari">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Internet Explorer">
+                <option value="Microsoft Edge">
+            </datalist>
+
+
+
+
 </body>
 </html>
