@@ -22,3 +22,13 @@ function fizzBuzz(limit) {
 }
 
 fizzBuzz();
+
+const animals = ["dog", "cat", "frog", "bat"];
+
+function AllFirstLetters(arrOfStrings) {
+    let bucket = "";
+    for (let el of arr) {
+        bucket += el.substring (0,1);
+    }
+    return bucket;
+}
