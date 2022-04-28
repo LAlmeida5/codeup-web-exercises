@@ -32,3 +32,14 @@ function AllFirstLetters(arrOfStrings) {
     }
     return bucket;
 }
+
+
+function alphabetize(str) {
+    // let strArray = str.split('');                        //This is how each method is used to complete
+    // console.log(strArray)
+    // let sortedArray = strArray.sort();
+    // return sortedArray.join('')
+    return str.split('').sort().join('');                   //This is the code refactored to achieve same outcome.
+}
+
+console.log(alphabetize("codeup"));
