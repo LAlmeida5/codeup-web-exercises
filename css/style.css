@@ -3,7 +3,33 @@ multi
 line
 comment
 */
+body {
+    background: url("/img/starsandnature.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .fancy-header {
-    color: purple;
+    color: #c4aead;
+    font-family: 'Comfortaa', cursive;
     text-decoration: underline;
+    text-decoration-color: #DEDEDE;
+}
+
+h1.fancy-header {
+    text-align: center;
+    color:#c4aead;
+}
+
+h2 {
+    color: #c4aead;
+    font-family: 'Comfortaa', cursive;
+    text-decoration: underline;
+    text-decoration-color: #DEDEDE;
+}
+
+body  {
+    color:   #c4aead;
+    font-family: 'Comfortaa', cursive;
 }
