@@ -6,43 +6,82 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
+/*.message-info {*/
+/*    color: var(--main-text-info) ;*/
+/*    background: var(--main-bg-info);*/
+/*    border-radius: 5px;*/
+/*    background-color: #CCDEFF;*/
+/*    width: 50%;*/
+/*    height: 20px;*/
+/*    border: 1px solid black;*/
+/*    padding: 10px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.message-success {*/
+/*    border-radius: 5px;*/
+/*    background-color: #CFF3DA;*/
+/*    width: 50%;*/
+/*    height: 20px;*/
+/*    border: 1px solid black;*/
+/*    padding: 10px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.message-warning {*/
+/*    border-radius: 5px;*/
+/*    background-color: #FCFBC9;*/
+/*    width: 50%;*/
+/*    height: 20px;*/
+/*    border: 1px solid black;*/
+/*    padding: 10px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.message-error {*/
+/*    border-radius: 5px;*/
+/*    background-color: #FAD2D6;*/
+/*    width: 50%;*/
+/*    height: 20px;*/
+/*    border: 1px solid black;*/
+/*    padding: 10px;*/
+/*    margin: 10px;*/
+/*}*/
+
+.message {
+    padding: .5em;
+    margin: .1em;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+
+:root {
+    --main-bg-info: #ccdeff;
+    --main-text-info: #4a45a1;
+    --text-success: #3c8b5b;
+    --bg-success: #cff3da;
+    --text-warning: #94821e;
+    --bg-warning: #fbfac9;
+    --text-error: #97394d;
+    --bg-error: #fad3d7;
+}
+
 .message-info {
-    color-: ;
-    border-radius: 5px;
-    background-color: #CCDEFF;
-    width: 50%;
-    height: 20px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    color: var(--main-text-info);
+    background: var(--main-bg-info);
 }
 
 .message-success {
-    border-radius: 5px;
-    background-color: #CFF3DA;
-    width: 50%;
-    height: 20px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    color: var(--text-success);
+    background: var(--bg-success);
 }
 
 .message-warning {
-    border-radius: 5px;
-    background-color: #FCFBC9;
-    width: 50%;
-    height: 20px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    color: var(--text-warning);
+    background: var(--bg-warning);
 }
 
 .message-error {
-    border-radius: 5px;
-    background-color: #FAD2D6;
-    width: 50%;
-    height: 20px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    color: var(--text-error);
+    background: var(--bg-error);
 }
