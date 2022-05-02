@@ -5,7 +5,7 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-
+/*this is how I completed the exercise:*/
 /*.message-info {*/
 /*    color: var(--main-text-info) ;*/
 /*    background: var(--main-bg-info);*/
@@ -47,6 +47,8 @@ body, html {
 /*    padding: 10px;*/
 /*    margin: 10px;*/
 /*}*/
+
+/* This is the updated completion of the exercise with the edition of the bonus and the code refactored a bit. */
 
 .message {
     padding: .5em;
