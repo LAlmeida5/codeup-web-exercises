@@ -16,7 +16,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav w-100">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Order Online</a>
                     </li>
@@ -26,7 +26,7 @@
                 </ul>
                 <form class="d-flex d-inline-flex justify-content-start">
                     <input class="form-control me-2 " type="search" placeholder="Zip Code" aria-label="Search">
-                    <button class="btn btn-outline-success " type="submit">Search stores near you!</button>
+                    <button class="btn btn-outline-success w-100" type="submit">Search stores near you!</button>
                 </form>
             </div>
         </div>
@@ -54,10 +54,15 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="card">
-                        <h7 class="card-header bg-primary text-white">Choose Size and Crust</h7>
+                        <div class="card-header bg-primary text-white">Choose Size and Crust</div>
                         <div class="card-body">
-                            <h7 class="card-title">Hand Tossed</h7>
-                            <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                            <div class="card-header">Hand Tossed</div>
+                            <ul class="list-group d-inline-flex">
+                                <li class="list-group list-group-flush"></li>
+                                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                                <li class="list-group-item"><input type="radio" id="ht-small" name = "crust" class="me-2"><label for="ht-small">Small (10")</label></li>
+                                <li class="list-group-item"><input type="radio" id="ht-medium" name = "crust" class="me-2"><label for="ht-medium">Medium (12")</label></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
