@@ -96,12 +96,58 @@ function returnProductEssentialDetails(product) {
 
 console.log(returnProductEssentialDetails(product1));
 
-let products: [product1, product2, product3];
+// let products: ([product1, product2, product3]);
 
-function returnAllProductsEssentialDetails(product) {
-    let productsOutput = [];
-    products.forEach(function(product)) {
-        productsOutput.push(returnProductEssentialDetails(product));
-    });
-        return productsOutput;
+// function returnAllProductsEssentialDetails(product) {
+//     let productsOutput = [];
+//     products.forEach(function(product)); {
+//         productsOutput.push(returnProductEssentialDetails(product));
+//     });
+//         return productsOutput;
+// }
+
+const hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "Spetember 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
+    }
+];
+
+function thetallest(arr) {                              //I need to work on these in order to be succerssful on the assesment on Friday!!
+   let tallest = {heightInMM: 0} ;
+   for (let hamster of arr ) {
+       if (hamster.heightInMM > tallest.heightInMM) {
+           tallest = hamster;
+       }
+   }
+   return tallest;
 }
+
+console.log(thetallest(hamsters));
