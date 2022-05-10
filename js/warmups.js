@@ -151,3 +151,25 @@ function thetallest(arr) {                              //I need to work on thes
 }
 
 console.log(thetallest(hamsters));
+
+function mostColorful(hamsters) {
+    let colorful = {fur: []};
+    for (let hamster of hamsters) {
+        if(hamster.fur.length > mostColorful.fur.length)
+            colorful = hamster;
+    }
+    return colorful;
+}
+console.log(mostColorful(hamsters));
+
+function mostColorfulFor(hamsters) {
+    let (mostColors = hamsters[0]);
+    for(let x = 1; x < hamsters.length; x++) {
+        if(hamsters[x].fur.length > mostColors.fur.length) {
+            mostColors = hamsters[x];
+        }
+    }
+    return mostColors;
+}
+
+console.log(mostColorfulFor(hamsters));
