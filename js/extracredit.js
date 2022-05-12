@@ -25,6 +25,13 @@
 
     console.log(addThree(27));
 
+// Write a function, filterNumbers() that takes in an array of mixed data types and returns an array of only the numbers type in ascencding order.
 
+    let mixedInput = ["fred", true , 5, 3];
+
+    function filterNumbers(arr) {
+
+    }
 
 }())
+
