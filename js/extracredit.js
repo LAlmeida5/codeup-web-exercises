@@ -30,7 +30,7 @@
     let mixedInput = ["fred", true , 5, 3];
 
     function filterNumbers(arr) {
-
+        if(arr[] === )
     }
 
 }())
