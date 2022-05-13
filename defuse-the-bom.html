@@ -27,10 +27,13 @@
         detonationTimer--;
     }
 
+    let notEod = setInterval (updateTimer, 1000);           // this calls the function to start the "ticker or countdown" of the timer.
+
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
 
+    function defuseTheBOM() {
+        clearInterval(notEod);
     }
 
     // Don't modify anything below this line!
