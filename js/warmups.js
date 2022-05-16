@@ -191,3 +191,4 @@ function stringProperties(str) {
 console.log(stringProperties("tacocat"));
 console.log(stringProperties("John Jacob"));
 console.log(stringProperties("Kacy Bobby"));
+
