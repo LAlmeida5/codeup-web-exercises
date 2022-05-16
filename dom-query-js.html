@@ -25,47 +25,69 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Change Header!</button>
+<button id="btn2">Change sub-Header Color</button>
+<button id="btn3">Change List Items</button>
+<button id="btn4">Change sub-Paragraph</button>
+
 <script>
     (function() {
-        "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        let mainHeader = document.getElementById('main-header');
+        // "use strict";
+        // // TODO: Uncomment next line and get the main header element by id
+        // let mainHeader = document.getElementById('main-header');
+        //
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // mainHeader.innerHTML = "Javascript is Cool";
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is Cool";
-
-        // TODO: Uncomment the next line and get the sub header element by id
-        let subHeader = document.getElementById('sub-header');
-
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "#0000ff";
-
-        // TODO: Uncomment the next line and get all list items
-        let listItems = document.getElementsByTagName('li');
-
-        // TODO: Set text color on every other list item to grey
-        for (let i = 0; i < listItems.length; i++) {
-            if (i % 2 === 0) {
-                listItems[i].style.color = "#808080";
-            }
+        let changeHdr = function () {
+            document.getElementById('main-header').innerHTML = "Javascript is Cool";
         }
 
-        // TODO: Set text color of li with dbid = 1 to blue
+        document.getElementById('btn1').addEventListener('click', changeHdr);
 
-        for (let i = 0; i < listItems.length; i++) {
-            let dbid = listItems[i].getAttribute("data-dbid");
-            if ( dbid == 1 ) listItems[i].style.color = "#0000ff";
+        // // TODO: Uncomment the next line and get the sub header element by id
+        // let subHeader = document.getElementById('sub-header');
+        //
+        // // TODO: Set the text color of subHeader to blue
+        // subHeader.style.color = "#0000ff";
+
+        let changeSubColor = function () {
+            document.getElementById('sub-header').style.color = "#0000ff"
         }
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        let subParagraphs = document.getElementsByClassName('sub-paragraph');
+        document.getElementById('btn2').addEventListener('click', changeSubColor);
 
-        console.log(subParagraphs);
+        // // TODO: Uncomment the next line and get all list items
+        // let listItems = document.getElementsByTagName('li');
+        //
+        // // TODO: Set text color on every other list item to grey
+        // for (let i = 0; i < listItems.length; i++) {
+        //     if (i % 2 === 0) {
+        //         listItems[i].style.color = "#808080";
+        //     }
+        // }
+        //
+        // // TODO: Set text color of li with dbid = 1 to blue
+        //
+        // for (let i = 0; i < listItems.length; i++) {
+        //     let dbid = listItems[i].getAttribute("data-dbid");
+        //     if ( dbid == 1 ) listItems[i].style.color = "#0000ff";
+        // }
+        //
+        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        // let subParagraphs = document.getElementsByClassName('sub-paragraph');
+        //
+        // console.log(subParagraphs);
+        //
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        //
+        // subParagraphs.item(0).innerHTML = "Mission Accomplished";
 
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-
-        subParagraphs.item(0).innerHTML = "Mission Accomplished";
+        let subParagraph = function () {
+            document.getElementsByClassName('sub-paragraph').item(0).innerHTML = "Mission Accomplished";
+        }
+        document.getElementById('btn4').addEventListener('click', subParagraph);
 
     })();
 </script>
