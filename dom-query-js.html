@@ -51,11 +51,11 @@
         // // TODO: Set the text color of subHeader to blue
         // subHeader.style.color = "#0000ff";
 
-        let changeSubColor = function () {
-            document.getElementById('sub-header').style.color = "#0000ff"
+        let changeSubHdr = function () {
+            document.getElementById('sub-header').style.color = "#0000ff";
         }
 
-        document.getElementById('btn2').addEventListener('click', changeSubColor);
+        document.getElementById('btn2').addEventListener('click', changeSubHdr);
 
         // // TODO: Uncomment the next line and get all list items
         // let listItems = document.getElementsByTagName('li');
@@ -73,7 +73,20 @@
         //     let dbid = listItems[i].getAttribute("data-dbid");
         //     if ( dbid == 1 ) listItems[i].style.color = "#0000ff";
         // }
-        //
+        let listItemsRun = document.querySelectorAll("li")
+        document.getElementById('btn3').addEventListener("click", function() {
+            for (let i = 0; i < listItemsRun.length; i++) {
+                if (i % 2 === 0) {
+                    listItemsRun[i].style.color = "gray";
+                }
+                if (listItemsRun[i].getAttribute("data-dbid") === "1") {
+                    listItemsRun[i].style.color = "blue"
+                }
+            }
+        });
+
+
+
         // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // let subParagraphs = document.getElementsByClassName('sub-paragraph');
         //
