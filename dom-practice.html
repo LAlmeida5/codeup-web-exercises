@@ -66,11 +66,11 @@
 <script>
 
     // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
-let answer = prompt("Pick a color");
+// let answer = prompt("Pick a color");
 let div1= document.getElementsByClassName("question")[0];
     console.log(document.getElementsByClassName("question"));
 
-    div1.style.color = answer;
+    // div1.style.color = answer;
     // This is doing the same as above but with a loop
 // let divs = document.getElementsByClassName("question");
 // for (let i = 0; i < divs.length; i++) {
@@ -78,7 +78,17 @@ let div1= document.getElementsByClassName("question")[0];
 //         divs[i].style.color = answer;
 //     }
 // }
-//
+// This is the listener and function used to change background to user selected color.
+    document.getElementById("changeColor").addEventListener("click", function() {
+        let color = document.getElementById("color").value;
+        document.body.style.backgroundColor = color;
+    })
+
+
+// let changeColor = function () {
+//         document.body.style.backgroundColor = userInput;
+
+
 </script>
 </body>
 </html>
