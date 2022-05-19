@@ -6,16 +6,34 @@
 </head>
 <body>
 
+<h1 class="heading">Welcome to jQuery Exercises </h1>
 
+<p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, excepturi, voluptatibus. Ab alias at consequatur, dolor ex inventore itaque laudantium magnam, modi nulla officiis rem, repellat reprehenderit sapiente vel voluptas?</p>
+
+<div class="main">
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+</div>
 
 
 
 <script src="js/jquery-3.6.0.js"></script>
 <script>
     $(function () {
-        alert("Oh Great! The page has loaded!!");
-    });
+        //Set a variable that store the content of your selected id.
+        // let contents = $('#codeup').html();
+        // // alerts the contents of said variable.
+        // alert(contents);
 
+        $('ul').css('font-size', '20px');
+        $(".codeup").css('border', '1px solid red');
+
+    });
 </script>
+
 </body>
 </html>
