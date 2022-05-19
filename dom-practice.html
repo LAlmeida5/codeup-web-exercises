@@ -63,6 +63,9 @@
     <button id="submitString">Add</button>
     <p id="madLib">Hello</p>
 </div>
+
+
+
 <script>
 
     // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
@@ -82,7 +85,27 @@ let div1= document.getElementsByClassName("question")[0];
     document.getElementById("changeColor").addEventListener("click", function() {
         let color = document.getElementById("color").value;
         document.body.style.backgroundColor = color;
-    })
+    });
+
+let todoInput = document.getElementById("todo");
+let todoList = document.getElementById("todosList");
+let todoBtn = document.getElementById("addTodo");
+
+todoBtn.addEventListener("click", function() {
+    if (todoInput.value !== "") {
+        let str = "<li>" + todoInput.value + "</li>";
+        todoList.innerHTML += str;
+        todoInput.value = "";
+    }
+});
+
+
+
+    // document.getElementById("addTodo").addEventListener("click", function() {
+    //     let ul = document.getElementById("todolist").value;
+    //     let li = document.createElement("li");
+    //     li.appendChild(document.createTextNode(" "))
+    // })
 
 
 // let changeColor = function () {
