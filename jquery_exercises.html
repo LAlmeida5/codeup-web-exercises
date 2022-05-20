@@ -5,11 +5,11 @@
     <title>jQuery Exercise</title>
 </head>
 <body>
-<h1>I'm Tired</h1>
-<h1>I'm also ready to go home!</h1>
-<h1 class="heading">Welcome to jQuery Exercises </h1>
+<!--<h1>I'm Tired</h1>-->
+<!--<h1>I'm also ready to go home!</h1>-->
+<h1 id="heading">Welcome to jQuery Exercises </h1>
 <div class="main">
-<p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, excepturi, voluptatibus. Ab alias at consequatur, dolor ex inventore itaque laudantium magnam, modi nulla officiis rem, repellat reprehenderit sapiente vel voluptas?</p>
+<p id="resize" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, excepturi, voluptatibus. Ab alias at consequatur, dolor ex inventore itaque laudantium magnam, modi nulla officiis rem, repellat reprehenderit sapiente vel voluptas?</p>
 
     <ul id="myList">
         <li class="items">Item 1</li>
@@ -24,6 +24,29 @@
 <script src="js/jquery-3.6.0.js"></script>
 <script>
     $(function () {
+    //selects a ID of "heading" and styles the background.
+    $('#heading').click(function() {
+        $(this).css('background-color', 'purple');
+    });
+
+    $('#resize').dblclick(function() {
+        $(this).css('font-size', '18px');
+    });
+
+    $('.items').hover(function() {
+        //This is what happens when the mouse enters the area.
+            $(this).css('background-color', 'red');
+        },
+        function() {
+        // followed by what happens when the mouse leaves the area.
+            $(this).css('background-color', 'white');
+        }
+    );
+
+        // $().click(function() {
+        //     (this).css('background-color', 'purple');
+        // });
+
        // Set a variable that store the content of your selected id.
        //  let contents = $('.codeup').html();
        //  // alerts the contents of said variable.
@@ -31,13 +54,15 @@
        //
        //  $('ul').css('font-size', '20px');
        //  $(".codeup").css('border', '1px solid red');
-        $('li').css('font-size', '20px');
+       //  $('li').css('font-size', '20px');
+       //
+       //  $('h1, p, li').css('background', 'blue');
+       //
+       //  $('h1').each( function(index, el) {
+       //      alert($(el).html());
+       //  });
 
-        $('h1, p, li').css('background', 'blue');
 
-        $('h1').each( function(index, el) {
-            alert($(el).html());
-        });
 
     });
 </script>
