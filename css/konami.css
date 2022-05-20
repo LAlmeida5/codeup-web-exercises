@@ -1,6 +1,6 @@
 body {
     color: #444;
-    font: normal 16px Helvetica, Arial, sans-serif;
+    font: bold 45px 'Zen loop', cursive;
     text-align: center;
 }
 
@@ -13,7 +13,8 @@ h1 {
     font-size: 18px;
     font-weight: bold;
 }
-.animate-charcter {
+
+.animate-character {
     text-transform: uppercase;
     background-image: linear-gradient(
             -225deg,
@@ -37,7 +38,7 @@ h1 {
         background-position: 200% center;
     }
 }
-
+    /*styling for to make keys realistic looking */
 .code span {
     background: #cccccc; /* Old browsers */
     background: -moz-linear-gradient(left,  #cccccc 0%, #eeeeee 50%, #cccccc 100%); /* FF3.6+ */

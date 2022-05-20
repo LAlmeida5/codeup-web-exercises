@@ -3,7 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Roboto:wght@100&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Zen+Loop&display=swap" rel="stylesheet">
     <title>Konami Code</title>
     <link rel="stylesheet" href="css/konami.css">
 </head>
@@ -11,13 +11,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1 class="animate-charcter"> Konami Code</h1>
+            <h1 class="animate-character">Konami Code</h1>
         </div>
     </div>
 </div>
 <p>
     Click somewhere on the page to ensure focus.<br>
-    Then enter the following code using your keyboard:
+<!--    Then, enter any of the following cheat codes using your keyboard:-->
+<!--    Then, enter the following cheat code using your keyboard or controller...-->
+    Then, enter the following cheat code using your controller!
 </p>
 
 <p class="code">
@@ -32,10 +34,47 @@
     <span>B</span>
     <span>A</span>
 </p>
+<!--<p class="code">-->
+<!--    <span>&darr;</span>-->
+<!--    <span>&darr;</span>-->
+<!--    <span>&uarr;</span>-->
+<!--    <span>&uarr;</span>-->
+<!--    <span>&larr;</span>-->
+<!--    <span>&rarr;</span>-->
+<!--    <span>&larr;</span>-->
+<!--    <span>&rarr;</span>-->
+<!--    <span>A</span>-->
+<!--    <span>B</span>-->
+<!--</p>-->
+<!--<p class="code">-->
+<!--    <span>&darr;</span>-->
+<!--    <span>&darr;</span>-->
+<!--    <span>&uarr;</span>-->
+<!--    <span>&uarr;</span>-->
+<!--    <span>&larr;</span>-->
+<!--    <span>&rarr;</span>-->
+<!--    <span>&larr;</span>-->
+<!--    <span>&rarr;</span>-->
+<!--    <span>A</span>-->
+<!--    <span>B</span>-->
+<!--</p>-->
+<!--<p class="code">-->
+<!--    <span>&darr;</span>-->
+<!--    <span>&darr;</span>-->
+<!--    <span>&uarr;</span>-->
+<!--    <span>&uarr;</span>-->
+<!--    <span>&larr;</span>-->
+<!--    <span>&rarr;</span>-->
+<!--    <span>&larr;</span>-->
+<!--    <span>&rarr;</span>-->
+<!--    <span>A</span>-->
+<!--    <span>B</span>-->
+<!--</p>-->
 
 <script src="js/jquery-3.6.0.js"></script>
 <script>
     "use strict";
+    //this function logs the keycode for each keystroke
     $(document).keyup(function(event){
         console.log(event.keyCode);
     });
@@ -45,26 +84,20 @@
             let konamikeys = [38,38,40,40,37,39,37,39,66,65],
                 started = false,
                 count = 0;
-
             $(document).keydown(function(e){
                 let reset = function() {
                     started = false;
                     count = 0;
-                    return;
                 };
-
               let  key = e.keyCode;
-
                 // Begin watching if first key in sequence was pressed.
                 if(!started){
-                    if(key == 38){
+                    if(key === 38 || 40) {
                         started = true;
                     }
                 }
-
-                // If we've started, pay attention to key presses, looking for right sequence.
+                // If we've started, track keystrokes for the right code sequence.
                 if (started){
-
                     if (konamikeys[count] == key){
                         count++;
                     } else {
@@ -73,8 +106,9 @@
                     }
                     if (count == 10){
                         // Success!
-                        alert('Konami code entered! Do something cool here.');
-                        reset();
+                        $('body').css({'background-image': "url('img/metalgear.png')", 'background-size':'contain'});
+                        //This is where I left off at the end of the day.
+
                     }
                 } else {
                     reset();
