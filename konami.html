@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Roboto:wght@100&family=Syne+Mono&display=swap" rel="stylesheet">
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="animate-charcter"> Konami Code</h1>
+        </div>
+    </div>
+</div>
+<p>
+    Click somewhere on the page to ensure focus.<br>
+    Then enter the following code using your keyboard:
+</p>
+
+<p class="code">
+    <span>&uarr;</span>
+    <span>&uarr;</span>
+    <span>&darr;</span>
+    <span>&darr;</span>
+    <span>&larr;</span>
+    <span>&rarr;</span>
+    <span>&larr;</span>
+    <span>&rarr;</span>
+    <span>B</span>
+    <span>A</span>
+</p>
+
+<script src="js/jquery-3.6.0.js"></script>
+<script>
+    "use strict";
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+    let global = {
+
+        konami: function() {
+            let konamikeys = [38,38,40,40,37,39,37,39,66,65],
+                started = false,
+                count = 0;
+
+            $(document).keydown(function(e){
+                let reset = function() {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+              let  key = e.keyCode;
+
+                // Begin watching if first key in sequence was pressed.
+                if(!started){
+                    if(key == 38){
+                        started = true;
+                    }
+                }
+
+                // If we've started, pay attention to key presses, looking for right sequence.
+                if (started){
+
+                    if (konamikeys[count] == key){
+                        count++;
+                    } else {
+                        // Incorrect key, restart.
+                        reset();
+                    }
+                    if (count == 10){
+                        // Success!
+                        alert('Konami code entered! Do something cool here.');
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        }
+    }
+
+    global.konami();
+
+</script>
+</body>
+</html>
