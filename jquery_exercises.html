@@ -5,8 +5,8 @@
     <title>jQuery Exercise</title>
 </head>
 <body>
-<!--<h1>I'm Tired</h1>-->
-<!--<h1>I'm also ready to go home!</h1>-->
+<h1>I'm Tired</h1>
+<h1>I'm also ready to go home!</h1>
 <h1 id="heading">Welcome to jQuery Exercises </h1>
 <div class="main">
 <p id="resize" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, excepturi, voluptatibus. Ab alias at consequatur, dolor ex inventore itaque laudantium magnam, modi nulla officiis rem, repellat reprehenderit sapiente vel voluptas?</p>
@@ -35,13 +35,12 @@
 
     $('.items').hover(function() {
         //This is what happens when the mouse enters the area.
-            $(this).css('background-color', 'red');
+            $(this).css('color', 'red');
         },
         function() {
         // followed by what happens when the mouse leaves the area.
-            $(this).css('background-color', 'white');
-        }
-    );
+            $(this).css('color', 'black');
+    });
 
         // $().click(function() {
         //     (this).css('background-color', 'purple');
