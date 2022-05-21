@@ -8,10 +8,36 @@ h1 {
     font-family: 'Macondo', cursive;
     font-size: 56px;
 }
+.second {
+    font-size: 60px;
+}
 
 .code {
     font-size: 18px;
     font-weight: bold;
+}
+/*to hide my content*/
+.hidden {
+    visibility: hidden;
+/*to reveal my content*/
+}
+.showMe {
+    visibility: visible;
+}
+
+#executionContent{
+    text-align: right;
+    padding-right: 50px;
+    font-family: 'Permanent Marker', cursive;
+    /*Applies outline to text.*/
+    color: whitesmoke;
+    font-size: 40px;
+    -webkit-text-stroke: 1px #8b0000;
+    text-shadow: -1px 1px 2px #23430C,
+                            1px 1px 2px #23430C,
+                            1px -1px 0 #23430C,
+                            -1px -1px 0 #23430C;
+
 }
 
 .animate-character {
