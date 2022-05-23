@@ -99,7 +99,36 @@ todoBtn.addEventListener("click", function() {
     }
 });
 
+//jQuery
 
+const toggleBtn = $('#toggleH1');
+
+function toggleFontSize() {
+    let h1s = $('h1');
+    h1s.each(function () {
+        if ($(this).css('font-size') !== '10px') {
+            $(this).css('font-size', '10px');
+        } else {
+            $(this).css('font-size', '20px');
+        }
+    });
+}
+
+let inervalId = setInterval(toggleFontSize, 1000);
+
+toggleBtn.click
+
+
+    // const toggleBtn = document.getElementById('h1');
+    //
+    // function changeFontSize() {
+    //     let allH1 = document.getElementById()
+    // }
+
+// let fontChange = setInterval(function() {
+//     document.getElementById('h1');
+//     $(("h1").css('fontSize', '10px'), 1000);
+// })
 
     // document.getElementById("addTodo").addEventListener("click", function() {
     //     let ul = document.getElementById("todolist").value;
