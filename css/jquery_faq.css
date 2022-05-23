@@ -5,3 +5,46 @@
 .highLightMe {
     background-color: #FF0;
 }
+
+button {
+    color: yellow;
+    background: black;
+}
+
+.container {
+    width:600px;
+    height:190px;
+    background-color: white;
+    padding-top:20px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.first-box {
+    float:left;
+    width:180px;
+    height:160px;
+    background-color:white;
+    border:solid black;
+    background-image: url("/img/1st.png");
+    background-size: contain;
+}
+.second-box {
+    float:left;
+    width:180px;
+    height:160px;
+    background-color:white;
+    border:solid black;
+    margin-left:25px;
+    background-image: url("/img/2nd.png");
+    background-size: contain;
+}
+.third-box {
+    float: right;
+    width: 180px;
+    height: 160px;
+    background-color: white;
+    border: solid black;
+    background-image: url("/img/3rd.png");
+    background-size: contain;
+}

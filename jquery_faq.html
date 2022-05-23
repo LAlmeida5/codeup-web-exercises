@@ -7,31 +7,72 @@
 </head>
 <body>
 <dl>
-    <dt>Where do I Make Reservations to Stay in Yellowstone?</dt>
+    <dt>Where do I Make Reservations to Stay in Yellowstone?</dt><br>
     <dd class="invisible">Yellowstone National Park Lodges operates the nine lodges in the park. All are open from late spring through fall, but only two are open in the winter: Old Faithful Snow Lodge and Mammoth Hot Springs Hotel. Be sure to make a reservation early!</dd><br>
-    <dt>Where can I see Animals?</dt>
+    <dt>Where can I see Animals?</dt><br>
     <dd class="invisible">Check at visitor centers for information about recent sightings.</dd><br>
-    <dt>How did Yellowstone get its name?</dt>
+    <dt>How did Yellowstone get its name?</dt><br>
     <dd class="invisible">Yellowstone National Park is named after the Yellowstone River, the major river running through the park. According to French-Canadian trappers in the 1800s, they asked the name of the river from the Minnetaree tribe, who live in what is now eastern Montana. They responded “Mi tse a-da-zi,” which literally translates as “Rock Yellow River.” The trappers translated this into French as “Roche Jaune” or “Pierre Jaune.” In 1797, explorer-geographer David Thompson used the English translation—“Yellow Stone.” Lewis and Clark called the Yellowstone River by the French and English forms. Subsequent use formalized the name as “Yellowstone.</dd><br>
-    <dt>Is Yellowstone the largest national park?</dt>
+    <dt>Is Yellowstone the largest national park?</dt><br>
     <dd class="invisible">No. More than half of Alaska’s national park units are larger, including Wrangell–St. Elias National Park and Preserve, which is the largest unit (13 million acres) in the National Park System. Until 1994, Yellowstone (at 2.2 million acres) was the largest national park in the contiguous United States. That year Death Valley National Monument was expanded and became a national park—it has more than 3 million acres.</dd>
     <dt>Is Yellowstone the most visited national park?</dt><br>
     <dd class="invisible">Yellowstone is in the top five national parks for number of recreational visitors. Great Smoky Mountains National Park often has the most. Visit https://irma.nps.gov/Stats/ to view up-to-date statistics for all national parks.</dd><br>
-    <dt>What is the difference between a national park and a national forest?</dt>
+    <dt>What is the difference between a national park and a national forest?</dt><br>
     <dd class="invisible">National parks are administered by the Department of the Interior and national forests by the Department of Agriculture. The National Park Service is mandated to preserve resources unimpaired, while the Forest Service is mandated to wisely manage resources for many sustainable uses. Six national forests surround Yellowstone National Park.</dd><br>
-    <dt>How many rangers work in Yellowstone?</dt>
+    <dt>How many rangers work in Yellowstone?</dt><br>
     <dd class="invisible">Approximately 738 people work for the National Park Service during the peak summer season. Approximately 386 are permanent, year-round employees. Park rangers work in education, resource management, law enforcement, emergency medical services, and backcountry operations. Other employees specialize in research, maintenance, management, administration, trail maintenance, fire management, and fee collection.</dd><br>
-    <dt>How do you become a park ranger?</dt>
+    <dt>How do you become a park ranger?</dt><br>
     <dd class="invisible">Many National Park Service employees begin their careers as volunteers or as seasonal employees. Hiring is very competitive and is conducted through the Office of Personnel Management. Learn more about working with us.</dd><br>
-    <dt>Can we swim in rivers and lakes?</dt>
+    <dt>Can we swim in rivers and lakes?</dt><br>
     <dd class="invisible">Swimming is not recommended because most lakes and streams are dangerously cold. Firehole Canyon, near Madison Junction, has a swimming area popular in summer. Soaking in thermal features is illegal. The area known as the Boiling River, north of Mammoth Hot Springs, allows soaking in the Gardner River near thermal outflow, but not in the feature itself. Soaking is allowed during daylight hours only and at your own risk.</dd><br>
-    <dt>What is the highest peak in the park?</dt>
+    <dt>What is the highest peak in the park?</dt><br>
     <dd class="invisible">Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358 feet.</dd><br>
 </dl>
-<button class="touchMe">AbRaCaDaBrA!!!</button>
+<button class="touchMe">AbRaCaDaBrA!!!</button><br><br>
+<div>
+    <dd><h3>Yosemite National Park</h3>
+        <ul>
+            <li>Yosemite National Park covers a total area of 747,956 acres.</li>
+            <li>The highest elevation found in Yosemite is 13,014 feet on Mount Lyell.</li>
+            <li>Yosemite was made a national park on October 1, 1890</li>
+        </ul>
+    </dd>
+</div>
+<div>
+    <dd><h3>Big Bend National Park</h3>
+        <ul>
+            <li>Big Bend National Park covers a total area of 801,163 acres</li>
+            <li>The highest elevation found in Big Bend is 7,832 feet on Emory Peak</li>
+            <li>Big Bend was made a national park on June 20, 1935</li>
+        </ul>
+    </dd>
+</div>
+<div>
+    <dd><h3>Guadalupe Mountains National Park</h3>
+        <ul>
+            <li>Guadalupe Mountains National Park covers a total area of 86,416 acres</li>
+            <li>The highest elevation found in Guadalupe Mountains is 8,751 feet on Guadalupe Peak</li>
+            <li>Guadalupe Mountains was made a national park on October 15, 1966</li>
+        </ul>
+    </dd>
+</div>
+<button class="listChange">See something cool?</button><br><br><br>
+
+<div class="container">
+    <div class="first-box">
+
+    </div>
+    <div class="second-box">
+
+    </div>
+    <div class="third-box">
+
+    </div>
+</div>
 
 <script src="js/jquery-3.6.0.js"></script>
 <script>
+    $(function () {
     "use strict";
 
     $('.touchMe').click(function() {
@@ -39,9 +80,18 @@
     });
 
     $('dt').click(function() {
-        $(this).toggleClass('highLightMe');
-    })
+        $(this).toggleClass('highLightMe')
+    });
+//selects the last child of each list.
+    $('.listChange').click(function() {
+        $('li:last-child').css('background', 'yellow')
+    });
 
+    $('h3').click(function() {
+        $(this).next().css('font-weight', 'bold')
+    });
+
+    });
 </script>
 
 </body>
