@@ -60,13 +60,15 @@
 
 <div class="container">
     <div class="first-box">
-
     </div>
+
     <div class="second-box">
-
     </div>
-    <div class="third-box">
 
+    <div class="third-box">
+    </div>
+    <div class="buttainer">
+    <button class="firstBtn">Swap >>></button> <button class="secondBtn"><<< Swap >>></button><button class='thirdBtn'><<< Swap</button>
     </div>
 </div>
 
@@ -89,6 +91,10 @@
 
     $('h3').click(function() {
         $(this).next().css('font-weight', 'bold')
+    });
+
+    $('ul').click(function() {
+        $(this).children().first().css('color', 'blue')
     });
 
     });
