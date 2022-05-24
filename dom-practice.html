@@ -65,7 +65,7 @@
 </div>
 
 
-
+<script src="js/jquery-3.6.0.js"></script>
 <script>
 
     // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
@@ -114,11 +114,18 @@ function toggleFontSize() {
     });
 }
 
-let inervalId = setInterval(toggleFontSize, 1000);
+// let intervalId = setInterval(toggleFontSize, 1000);
 
-toggleBtn.click
+// toggleBtn.click
+    //completed with vanilla javascript
+   // document.getElementsByClassName("question")[4].addEventListener('mouseenter', function() {
+   //     alert('Congratulations on you new cruise!');
+   // });
 
-
+    //completed with jQuery and nth-of-type
+$('div:nth-of-type(5)').addEventListener('mouseenter', function() {
+    alert('Congratulations on you new cruise!');
+});
     // const toggleBtn = document.getElementById('h1');
     //
     // function changeFontSize() {
