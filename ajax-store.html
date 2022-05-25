@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Online Store</title>
 </head>
@@ -19,12 +19,34 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.0.js"></script>
 
 <script>
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+//this is my get request with my "when done" function to execute a task.  A for each loop is used to iterate through the object elements and complete
+//the transefer of data from the json file to the html page. The result of thge function task is then 'appended ' to the desired location.
+//In this instance i appended the data to the table with an ID of products.
+    $.get('data/inventory.json').done(function(tools) {
+        tools.forEach(function(tool) {
+            let transfer = "<tr>" + "<th>" + tool.title + "</th>" + "<th>" + tool.quantity + "</th>"+ "<th>" + tool.price + "</th>"+ "<th>" + tool.categories + "</th>" + "</tr>"
+                $('#products').append(transfer);
+        });
+    });
+// //This is my GET request using jquery.
+//     $.ajax({
+//         type: 'GET',
+//         url: 'data/inventory.json',
+//         success: function(data) {
+//
+//             console.log(data);
+//         },
+//         error: function(jqXHR, textStatus, error) {
+//             console.log(error);
+//         }
+//     });
+//     console.log("test");
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
