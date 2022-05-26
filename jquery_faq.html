@@ -30,34 +30,34 @@
 </dl>
 <button class="touchMe">AbRaCaDaBrA!!!</button><br><br>
 <div>
-    <dd><h3>Yosemite National Park</h3>
+    <h3>Yosemite National Park</h3>
         <ul>
             <li>Yosemite National Park covers a total area of 747,956 acres.</li>
             <li>The highest elevation found in Yosemite is 13,014 feet on Mount Lyell.</li>
             <li>Yosemite was made a national park on October 1, 1890</li>
+            <li>Fact # 4</li>
         </ul>
-    </dd>
 </div>
 <div>
-    <dd><h3>Big Bend National Park</h3>
+    <h3>Big Bend National Park</h3>
         <ul>
             <li>Big Bend National Park covers a total area of 801,163 acres</li>
             <li>The highest elevation found in Big Bend is 7,832 feet on Emory Peak</li>
             <li>Big Bend was made a national park on June 20, 1935</li>
+            <li>Fact # 4</li>
         </ul>
-    </dd>
 </div>
 <div>
-    <dd><h3>Guadalupe Mountains National Park</h3>
+    <h3>Guadalupe Mountains National Park</h3>
         <ul>
             <li>Guadalupe Mountains National Park covers a total area of 86,416 acres</li>
             <li>The highest elevation found in Guadalupe Mountains is 8,751 feet on Guadalupe Peak</li>
             <li>Guadalupe Mountains was made a national park on October 15, 1966</li>
+            <li>Fact # 4</li>
         </ul>
-    </dd>
 </div>
 <button class="listChange">See something cool?</button><br><br><br>
-
+// This is the start of the Traversing exercise BONUS.
 <div class="container">
     <div class="first-box">
     </div>
@@ -77,22 +77,23 @@
     $(function () {
     "use strict";
 
+    // #5 of attribute methods exercise.
     $('.touchMe').click(function() {
         $('dd').toggleClass('invisible')
     });
-
+    // bonus for attribute method exercise.
     $('dt').click(function() {
         $(this).toggleClass('highLightMe')
     });
-//selects the last child of each list.
-    $('.listChange').click(function() {
+//# 3 traversing exercise. This function selects the last child of each list.
+        $('.listChange').click(function() {
         $('li:last-child').css('background', 'yellow')
     });
-
+//# 4 traversing exercise. This function boldens the li's under the clicked h3.
     $('h3').click(function() {
         $(this).next().children().css('font-weight', 'bold')
     });
-
+//# 5 traversing exercise. This function cahnges font color of first li of the parent ul.
     $('ul').click(function() {
         $(this).children().first().css('color', 'blue')
     });
