@@ -24,40 +24,31 @@
             zoom: 9 // starting zoom
         });
 
-        geocode('1510 polk st, houston, TX 77003', MAPBOX_API_KEY).then(function (data) {
-            console.log(data);
-            const  POPUP_TOYOTA = new mapboxgl.Popup()
-                .setLngLat(data)
-                .setHTML('<p> This is where the Rockets play!</p>')
-                .addTo(MAP);
-        });
+        // let places = [
+        //     {
+        //         name: "Yankees Stadium",
+        //         coordinates: [-73.92249631, 40.82416337]
+        //     }, {
+        //         name: "Katz Deli",
+        //         coordinates: [-73.98741, 40.72226],
+        //     }, {
+        //         name: "China One",
+        //         coordinates: [-87.39857, 36.63104],
+        //     }, {
+        //         name: "Stout's Pizza",
+        //         coordinates: [-98.46471, 29.60497],
+        //     }, {
+        //         name: 'Anchor Bar',
+        //         coordinates: [-98.574063, 29.596055]
+        //     }, {
+        //         name: 'Casa Frida',
+        //         coordinates: [-98.491297, 29.41293]
+        //     }];
 
-        reverseGeocode({lat: 52.3353, lng: 4.8659}, MAPBOX_API_KEY).then(function (location) {
-            console.log(location);
-        });
-
-        let places = [
-            {
-                name: "Yankees Stadium",
-                coordinates: [-73.92249631, 40.82416337]
-            }, {
-                name: "Katz Deli",
-                coordinates: [-73.98741, 40.72226],
-            }, {
-                name: "China One",
-                coordinates: [-87.39857, 36.63104],
-            }, {
-                name: "Stout's Pizza",
-                coordinates: [-98.46471, 29.60497],
-            }, {
-                name: 'Anchor Bar',
-                coordinates: [-98.574063, 29.596055]
-            }, {
-                name: 'Casa Frida',
-                coordinates: [-98.491297, 29.41293]
-            }];
-        geocode('1036 S Alamo St San Antonio, TX 78210', MAPBOX_API_KEY).then(function (data) {
-            console.log(data);
+        places.forEach(function(place) {
+            let marker = new mapboxgl.Marker()
+                .setLngLat(place.coordinates)
+                .addTo(MAP)
         });
 
 
