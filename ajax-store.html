@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="css/ajax_store.css"></script>
     <title>Online Store</title>
 </head>
 <body>
 
+//boostrap example div
+<div class="alert alert-success" role="alert">Well done!</div>
+
 <h1>My Tool Store</h1>
 
 <table id="products">
-    <thead>
+    <thead>f
         <tr>
             <th>Title</th>
             <th>Quantity</th>
@@ -17,7 +22,9 @@
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
-</table>
+</table><br><br><br>
+
+<button id="refresh">Refresh Page</button>
 
 <script src="js/jquery-3.6.0.js"></script>
 
@@ -28,12 +35,19 @@
 //this is my get request with my "when done" function to execute a task.  A for each loop is used to iterate through the object elements and complete
 //the transefer of data from the json file to the html page. The result of thge function task is then 'appended ' to the desired location.
 //In this instance i appended the data to the table with an ID of products.
+
+    // Ajax store exercise Q# 3: This is my get request.
     $.get('data/inventory.json').done(function(tools) {
         tools.forEach(function(tool) {
             let transfer = "<tr>" + "<th>" + tool.title + "</th>" + "<th>" + tool.quantity + "</th>"+ "<th>" + tool.price + "</th>"+ "<th>" + tool.categories + "</th>" + "</tr>"
                 $('#products').append(transfer);
         });
     });
+
+    //ajax stor exercise Q# 5:  reloads the page when the "refresh page" button is clicked
+    $('#refresh').click(function() {
+        window.location.reload();
+    })
 // //This is my GET request using jquery.
 //     $.ajax({
 //         type: 'GET',

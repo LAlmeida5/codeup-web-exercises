@@ -24,11 +24,26 @@
         ],
         "price": 200
     }, {
-        "title": "Screwdrivers",
-        "quantity": 25,
+        "title": "Miter Saw",
+        "quantity": 10,
         "categories": [
-            "tool"
+          "tool",
+          "powered"
         ],
-        "price": 10
-    }
+        "price": 250
+    }, {
+        "title": "Socket set (31 pcs)",
+        "quantity": 18,
+        "categories": [
+          "tool"
+        ],
+        "price": 80
+    }, {
+        "title": "test",
+        "quantity": 18,
+        "categories": [
+          "tool"
+        ],
+        "price": 80
+  }
 ]
