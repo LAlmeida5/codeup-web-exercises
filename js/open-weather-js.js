@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 const URL = "https:api.openweathermap.org/data/2.5/onecall";
 
@@ -20,6 +20,7 @@ geocode("San Antonio, US", MAPBOX_API_KEY).then(function(results) {
         units: "imperial"
     }).done(function(results) {
         console.log(results)
+        $("#icon").css("background-image", "url('https://openweathermap.org/img/w/" + results.daily[0].weather[0].icon + ".png')")
     })
 });
 
