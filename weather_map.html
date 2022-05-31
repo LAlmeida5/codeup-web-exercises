@@ -13,28 +13,32 @@
     <title>Weather Map Project</title>
 </head>
 <body>
-    <h1 id="place"></h1>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Navbar</span>
+        </div>
+    </nav>
+
+   <h1 id="place"></h1>
     <div id='map' style='width: 95vw; height: 75vh; margin: auto'></div>
 
 
 <!--linked files-->
-<script src="js/keys.js"></script>
-<script src="js/geocode-utils.js"></script>
-<script src="js/jquery-3.6.0.js"></script>
-
-<script>
-    mapboxgl.accessToken = MAPBOX_API_KEY;
-    const MAP = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-98.4946, 29.4252], // starting position [lng, lat]
-        zoom: 9 // starting zoom
-    });
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/keys.js"></script>
+    <script src="js/geocode-utils.js"></script>
 
 
-</script>
+    <script>
+        mapboxgl.accessToken = MAPBOX_API_KEY;
+        const MAP = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [-98.4946, 29.4252], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+        });
 
 
-
+    </script>
 </body>
 </html>
