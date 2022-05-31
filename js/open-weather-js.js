@@ -24,6 +24,3 @@ geocode("San Antonio, US", MAPBOX_API_KEY).then(function(results) {
     })
 });
 
-reverseGeocode({lat: 52.3353, lng: 4.8659}, MAPBOX_API_KEY).then(function (location) {
-    console.log(location);
-});
