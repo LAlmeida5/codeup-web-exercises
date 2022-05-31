@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Mapbox links    -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="js/open-weather-js.js">
+    <!--Bootstrap meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Weather Map Project</title>
 </head>
 <body>
+    <h1 id="place"></h1>
+    <div id='map' style='width: 95vw; height: 75vh; margin: auto'></div>
+
+
+<!--linked files-->
+<script src="js/keys.js"></script>
+<script src="js/geocode-utils.js"></script>
+<script src="js/jquery-3.6.0.js"></script>
+
+<script>
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const MAP = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+</script>
+
+
 
 </body>
 </html>
