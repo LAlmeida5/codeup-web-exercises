@@ -36,9 +36,9 @@ geocode("San Antonio, US", MAPBOX_API_KEY).then(function(results) {
                 const date = new Date(card.dt * 1000);
                 //this const takes the date variable and attaches data from weather API "property" to a new format array.
                 const [month, day, year] = [ date.getDay(), date.getMonth(), date.getFullYear()];
-                let imgSrc = 'http://openweathermap.org/img/w/[icon].png' + card.weather[0].icon + '.png';
+                let imgSrc = 'http://openweathermap.org/img/w/' + card.weather[0].icon + '.png';
                 let cards = '<div class="card col-2 m-auto" >' +
-                    '<div class="card-header">' + [month, day, year] + imgSrc + '</div>' +
+                    '<div class="card-header">' + [month + '-' + day + '-' + year] + '<img src=' + imgSrc + '>'  + '</div>' +
                     '<ul class="list-group list-group-flush">' +
                     '<li class="list-group-item">' + card.weather[0].description + '</li>' +
                     '<li class="list-group-item">' + 'Humidity:' + card.humidity + '</li>' +
