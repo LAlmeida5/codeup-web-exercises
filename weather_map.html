@@ -31,13 +31,12 @@
         <h1 id="place"></h1>
     </div>
 
-
 <!--linked files-->
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/keys.js"></script>
-    <script src="js/open-weather-js.js"></script>
+<!--geocode file must be above open weather js or else undefined if below-->
     <script src="js/geocode-utils.js"></script>
-
+    <script src="js/open-weather-js.js"></script>
 
     <script>
         mapboxgl.accessToken = MAPBOX_API_KEY;
@@ -47,7 +46,6 @@
             center: [-98.4946, 29.4252], // starting position [lng, lat]
             zoom: 9 // starting zoom
         });
-
 
     </script>
 </body>
