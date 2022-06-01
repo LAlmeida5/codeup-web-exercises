@@ -1,5 +1,3 @@
-"use strict"
-
 const URL = "https:api.openweathermap.org/data/2.5/onecall";
 
 $.get(URL, {
@@ -20,6 +18,9 @@ geocode("San Antonio, US", MAPBOX_API_KEY).then(function(results) {
         units: "imperial"
     }).done(function(results) {
         console.log(results)
+        let x = 1;
+        let y = 4;
+
     })
 });
 
