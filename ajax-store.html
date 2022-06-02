@@ -10,7 +10,7 @@
 <body>
 
 <!--boostrap example div-->
-<div class="alert alert-success" role="alert">Well done!</div>
+<!--<div class="alert alert-success" role="alert">Well done!</div>-->
 
 <h1>My Tool Store</h1>
 
@@ -24,7 +24,7 @@
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
-</table><br><br><br>
+</table><br><br>
 
 <button id="refresh">Refresh Page</button>
 
@@ -33,41 +33,35 @@
 <script>
 (function() {
     "use strict";
+
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-//this is my get request with my "when done" function to execute a task.  A for each loop is used to iterate through the object elements and complete
-//the transefer of data from the json file to the html page. The result of thge function task is then 'appended ' to the desired location.
-//In this instance i appended the data to the table with an ID of products.
-
-    // Ajax store exercise Q# 3: This is my get request.
-    $.get('data/inventory.json').done(function(tools) {
-        tools.forEach(function(tool) {
-            let transfer = "<tr>" + "<th>" + tool.title + "</th>" + "<th>" + tool.quantity + "</th>"+ "<th>" + tool.price + "</th>"+ "<th>" + tool.categories + "</th>" + "</tr>"
-                $('#products').append(transfer);
-        });
-    });
-
-    //ajax stor exercise Q# 5:  reloads the page when the "refresh page" button is clicked
-    $('#refresh').click(function() {
-        window.location.reload();
-    })
-// //This is my GET request using jquery.
-//     $.ajax({
-//         type: 'GET',
-//         url: 'data/inventory.json',
-//         success: function(data) {
-//
-//             console.log(data);
-//         },
-//         error: function(jqXHR, textStatus, error) {
-//             console.log(error);
-//         }
-//     });
-//     console.log("test");
-
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+//this is my get request with my "when done" function to execute a task.  A for each loop is used to iterate through the object elements and //complete
+//the transfer of data from the json file to the html page. The result of the function task is then 'appended ' to the desired location.
+//In this instance I appended the data to the table with an ID of products.
+
+    // Ajax store exercise Q# 3: This is my get request.
+    $.get('data/inventory.json').done(function(tools) {
+        tools.forEach(function(tool) {
+            let transfer = "<tr>" +
+                "<th>" + tool.title + "</th>" +
+                "<th>" + tool.quantity + "</th>" +
+                "<th>" + tool.price + "</th>" +
+                "<th>" + tool.categories + "</th>" +
+                "</tr>"
+                $('#products').append(transfer);
+        });
+    });
+
+    //ajax store exercise Q# 5:  reloads the page when the "refresh page" button is clicked
+    $('#refresh').click(function() {
+        window.location.reload();
+    })
+
 })();
 </script>
 
