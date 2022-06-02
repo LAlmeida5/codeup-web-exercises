@@ -1,1 +1,19 @@
-/* ajax store exercise Q#6: styling my store page with bootstrap*/
+/* ajax store exercise Q#6: styling my store page with css*/
+
+body {
+    background-image: url("/img/workshop.png");
+    background-attachment: fixed;
+}
+
+#refresh {
+    background-color: saddlebrown;
+    color: orange;
+}
+
+h1 {
+/*    continue styling, this is where i left off*/
+}
+
+#products {
+
+}
