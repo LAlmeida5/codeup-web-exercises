@@ -1,6 +1,7 @@
 "use strict";
 
 let userInput = prompt("Enter your username")
+                                    //This is how you grab what the user enters and attach it in the url
 const url = `https://api.github.com/users/${userInput}/events/public`
 fetch(url, {headers: {Authorization: `token ${PROMISES_GH_KEY}`}})
     .then((resp) => resp.json())
