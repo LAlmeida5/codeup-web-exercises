@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,14 +81,14 @@
                 // If it matches it counts or "increments", otherwise it resets the count of correct keys.
 
                 if (started){
-                    if (konamikeys[count] == key){
+                    if (konamikeys[count] === key){
                         // match inrements the count.
                         count++;
                     } else {
                         // Incorrect key, restarts count.
                         reset();
                     }
-                    if (count == 10){
+                    if (count === 10){
                         // Hits the count to execute the following task.
                         $('body').css({'background-image': "url('img/metalgear.png')", 'background-size':'cover', 'background-attachment':'fixed'});
                         $('h1, .hideMe').css('visibility', 'hidden');

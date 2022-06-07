@@ -151,28 +151,28 @@ function thetallest(arr) {                              //I need to work on thes
 }
 
 console.log(thetallest(hamsters));
+//
+// function mostColorful(hamsters) {
+//     let colorful = {fur: []};
+//     for (let hamster of hamsters) {
+//         if(hamster.fur.length > mostColorful.fur.length)
+//             colorful = hamster;
+//     }
+//     return colorful;
+// }
+// console.log(mostColorful(hamsters));
 
-function mostColorful(hamsters) {
-    let colorful = {fur: []};
-    for (let hamster of hamsters) {
-        if(hamster.fur.length > mostColorful.fur.length)
-            colorful = hamster;
-    }
-    return colorful;
-}
-console.log(mostColorful(hamsters));
+// function mostColorfulFor(hamsters) {
+//     let (mostColors = hamsters[0]);
+//     for(let x = 1; x < hamsters.length; x++) {
+//         if(hamsters[x].fur.length > mostColors.fur.length) {
+//             mostColors = hamsters[x];
+//         }
+//     }
+//     return mostColors;
+// }
 
-function mostColorfulFor(hamsters) {
-    let (mostColors = hamsters[0]);
-    for(let x = 1; x < hamsters.length; x++) {
-        if(hamsters[x].fur.length > mostColors.fur.length) {
-            mostColors = hamsters[x];
-        }
-    }
-    return mostColors;
-}
-
-console.log(mostColorfulFor(hamsters));
+// console.log(mostColorfulFor(hamsters));
 
 function stringProperties(str) {
     const obj = {};
@@ -191,4 +191,6 @@ function stringProperties(str) {
 console.log(stringProperties("tacocat"));
 console.log(stringProperties("John Jacob"));
 console.log(stringProperties("Kacy Bobby"));
+
+fetch('https://quotes.rest/qod').then(res => res.json()).then(res => console.log(res));
 
