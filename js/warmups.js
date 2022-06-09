@@ -1,5 +1,5 @@
-// "use strict"
-//
+"use strict"
+
 // console.log("Yay! I completed the warm-up!")
 //
 //
@@ -193,4 +193,5 @@ console.log(stringProperties("John Jacob"));
 console.log(stringProperties("Kacy Bobby"));
 
 fetch('https://quotes.rest/qod').then(res => res.json()).then(res => console.log(res));
+
 
