@@ -56,3 +56,22 @@ const getEmail = users.map(user => user.email);
 console.log(getEmail);
 
 //#4
+const yrsExp = users.reduce((total, user) => {
+    return total + user.yearsOfExperience / users.length;
+}, 0);
+
+console.log(yrsExp);
+
+//#5
+
+const longEmail = (previous, user) => {
+    if (previous.email.length > user.email.length) {
+        return previous;
+    }else {
+        return user;
+    }
+}
+
+const longestEmail = users.reduce(longEmail, {email:[]});
+
+console.log(longestEmail);
